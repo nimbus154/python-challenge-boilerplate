@@ -42,3 +42,8 @@ def update(item_id=None):
 def delete(item_id=None):
     del db[item_id]
     return "", 200
+
+
+if __name__ == "__main__":
+    # to debug interactively in PyCharm, use https://stackoverflow.com/questions/76242327/pycharm-runs-a-flask-app-but-fails-to-debug-it-in-python3-11
+    app.run(debug=True, host="0.0.0.0")
