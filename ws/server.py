@@ -4,7 +4,9 @@ from websockets import ConnectionClosedOK
 from websockets.asyncio.server import serve
 
 
+# websocket object docs https://websockets.readthedocs.io/en/stable/reference/asyncio/server.html#websockets.asyncio.server.ServerConnection
 async def echo(websocket):
+    # also message = await websocket.recv()
     async for message in websocket:
         try:
             await websocket.send(message)
